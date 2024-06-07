@@ -1,0 +1,27 @@
+.goal-detail-dialog .css-1mrlcrk-MuiPaper-root-MuiDialog-paper {
+  max-width: 384px;
+}
+.goal-detail-dialog .css-15k2pz6 {
+  width: 100%;
+  height: 38px;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.sort-dialog .css-1mrlcrk-MuiPaper-root-MuiDialog-paper {
+  max-width: none;
+  min-width: none;
+  width: 866px;
+}
+.sort-dialog .css-1lrt8eq-MuiButtonBase-root-MuiButton-root {
+  height: 32px;
+  border-radius: 16px;
+  margin-right: 8px;
+  padding: 0 5px;
+}
+
+.MuiPopover-root
+  .sort-menu
+  .css-1jx2sgq-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  width: none;
+}

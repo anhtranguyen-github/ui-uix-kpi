@@ -1,0 +1,12 @@
+.MuiPopover-root .css-1jx2sgq-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  width: inherit;
+  box-shadow: none;
+  padding: 0;
+}
+.MuiPaper-root
+  .MuiList-root
+  .MuiList-padding
+  .MuiMenu-list
+  .css-6hp17o-MuiList-root-MuiMenu-list {
+  padding: 0;
+}

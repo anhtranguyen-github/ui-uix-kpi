@@ -1,0 +1,34 @@
+.MuiDialog-container .css-tk3fjo-MuiPaper-root-MuiDialog-paper {
+  max-width: none;
+  background-color: transparent;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthLg.css-4vvi4k-MuiPaper-root-MuiDialog-paper {
+  background-color: transparent;
+  box-shadow: none;
+  width: calc(750px + 300px + 15px);
+  margin-left: calc(calc(100% - 750px) / 2);
+}
+.MuiPopover-root .css-1jx2sgq-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: none;
+  border: #0000001a 1px solid;
+  margin-top: 10px;
+}
+.MuiPopover-root .css-8je8zh-MuiTouchRipple-root,
+.MuiPopover-root .css-bk7hra-MuiButtonBase-root-MuiMenuItem-root,
+.MuiPopover-root .css-1haf1h4-MuiButtonBase-root-MuiMenuItem-root {
+  border-radius: 10px;
+}
+.MuiPopover-root .css-19wi7b2-MuiButtonBase-root-MuiMenuItem-root:hover {
+  background-color: rgba(80, 81, 249, 0.1);
+  border-radius: 10px;
+}
+.MuiPopover-root .css-1haf1h4-MuiButtonBase-root-MuiMenuItem-root:hover {
+  background-color: #5051f9;
+}
+.MuiPopover-root .css-1jx2sgq-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  width: 694px;
+}

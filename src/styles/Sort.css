@@ -1,0 +1,16 @@
+.due-menu .css-1jx2sgq-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  width: 350px;
+  background-color: transparent;
+  border: none;
+}
+.label-menu .css-1jx2sgq-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  width: 350px;
+  background-color: transparent;
+  border: none;
+}
+.label-menu .css-16a9ube-MuiButtonBase-root-MuiMenuItem-root:hover {
+  background-color: transparent;
+}
+.due-menu .css-16a9ube-MuiButtonBase-root-MuiMenuItem-root:hover {
+  background-color: transparent;
+}
