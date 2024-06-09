@@ -182,11 +182,7 @@ const Header = ({ onMenuClick, isNavbarVisible }) => {
         sx={{ mt: 2 }}
       >
         <Box
-          sx={{
-            width: 800,
-            maxHeight: 10000,
-            overflowY: "auto",
-          }}
+          sx={{ mt: 2, width: "90%", maxWidth: "90vw", maxHeight: "90vh" }}
         >
           {/* <Typography variant="h6" sx={{ p: 2 }}>
             Thông báo
@@ -195,7 +191,7 @@ const Header = ({ onMenuClick, isNavbarVisible }) => {
             <ListItem>
               <Card sx={{ width: "100%", boxShadow: "none" }}>
                 {" "}
-                {/* Đặt boxShadow thành "none" để loại bỏ đổ bóng */}
+                {}
                 <CardContent>
                   <Grid container spacing={2} alignItems="center">
                     <Grid item xs={18}>
