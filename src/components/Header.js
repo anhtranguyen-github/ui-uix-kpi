@@ -7,12 +7,17 @@ import {
   IconButton,
   InputBase,
   Box,
-  Button,
   Avatar,
+  Popover,
+  List,
+  ListItem,
+  ListItemText,
+  Button,
+  Card,
+  CardContent,
+  Grid,
 } from "@mui/material";
 import {
-  LightMode as LightModeIcon,
-  NightlightOutlined as NightlightOutlinedIcon,
   NotificationsNoneOutlined as NotificationsNoneOutlinedIcon,
   KeyboardArrowDownOutlined as KeyboardArrowDownOutlinedIcon,
   LogoutOutlined as LogoutOutlinedIcon,
@@ -28,6 +33,7 @@ const Header = ({ onMenuClick, isNavbarVisible }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [activeButton, setActiveButton] = useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   useEffect(() => {
     if (location.pathname === "/user-info/setting") {
@@ -40,6 +46,18 @@ const Header = ({ onMenuClick, isNavbarVisible }) => {
   const handleSettingsClick = () => {
     navigate("/user-info/setting");
   };
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
+
   return (
     <AppBar
       position="static"
@@ -102,8 +120,7 @@ const Header = ({ onMenuClick, isNavbarVisible }) => {
             display: "flex",
             display: { sm: "none", lg: "flex", xs: "none" },
           }}
-        >
-        </Box>
+        ></Box>
         <Box
           sx={{
             display: "flex",
@@ -130,12 +147,15 @@ const Header = ({ onMenuClick, isNavbarVisible }) => {
               }}
             />
           </IconButton>
-          <NotificationsNoneOutlinedIcon
+          <IconButton
+            onClick={handleClick}
             sx={{
               color: "#000",
               display: { sm: "none", xs: "none", lg: "block", md: "block" },
             }}
-          />
+          >
+            <NotificationsNoneOutlinedIcon />
+          </IconButton>
           <Avatar
             alt="Remy Sharp"
             src={avatar}
@@ -146,6 +166,191 @@ const Header = ({ onMenuClick, isNavbarVisible }) => {
           <LogoutOutlinedIcon sx={{ color: "#D55F5A" }} />
         </Box>
       </Toolbar>
+      <Popover
+        id={id}
+        open={open}
+        anchorEl={anchorEl}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "center",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
+        sx={{ mt: 2 }}
+      >
+        <Box
+          sx={{
+            width: 800,
+            maxHeight: 10000,
+            overflowY: "auto",
+          }}
+        >
+          {/* <Typography variant="h6" sx={{ p: 2 }}>
+            Thông báo
+          </Typography> */}
+          <List>
+            <ListItem>
+              <Card sx={{ width: "100%", boxShadow: "none" }}>
+                {" "}
+                {/* Đặt boxShadow thành "none" để loại bỏ đổ bóng */}
+                <CardContent>
+                  <Grid container spacing={2} alignItems="center">
+                    <Grid item xs={18}>
+                      <Typography variant="h6" component="div" color="#5051F9">
+                        Toast Title
+                      </Typography>
+                      <Typography variant="body2">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the ...
+                      </Typography>
+                      <Grid container spacing={2} alignItems="center">
+                        <Grid item xs={6}>
+                          <Typography variant="body2" color="#5051F9">
+                            1 hour ago
+                          </Typography>
+                        </Grid>
+                        <Grid
+                          item
+                          xs={6}
+                          container
+                          justifyContent="flex-end"
+                          alignItems="flex-end"
+                        >
+                          <Button size="small" disableRipple>
+                            View detail
+                          </Button>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                </CardContent>
+              </Card>
+            </ListItem>
+
+            <ListItem>
+              <Card sx={{ width: "100%", boxShadow: "none" }}>
+                {" "}
+                {/* Đặt boxShadow thành "none" để loại bỏ đổ bóng */}
+                <CardContent>
+                  <Grid container spacing={2} alignItems="center">
+                    <Grid item xs={18}>
+                      <Typography variant="h6" component="div" color="#5051F9">
+                        Toast Title
+                      </Typography>
+                      <Typography variant="body2">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the ...
+                      </Typography>
+                      <Grid container spacing={2} alignItems="center">
+                        <Grid item xs={6}>
+                          <Typography variant="body2" color="#5051F9">
+                            1 hour ago
+                          </Typography>
+                        </Grid>
+                        <Grid
+                          item
+                          xs={6}
+                          container
+                          justifyContent="flex-end"
+                          alignItems="flex-end"
+                        >
+                          <Button size="small" disableRipple>
+                            View detail
+                          </Button>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                </CardContent>
+              </Card>
+            </ListItem>
+
+            <ListItem>
+              <Card sx={{ width: "100%", boxShadow: "none" }}>
+                {" "}
+                {/* Đặt boxShadow thành "none" để loại bỏ đổ bóng */}
+                <CardContent>
+                  <Grid container spacing={2} alignItems="center">
+                    <Grid item xs={18}>
+                      <Typography variant="h6" component="div" color="#C00000">
+                        Lời nhắc: Quá hạn hoàn thành
+                      </Typography>
+                      <Typography variant="body2">
+                        Công việc "[Tên công việc]" đã trễ hạn từ ngày [Hạn
+                        chót]. Đến nay đã trễ [Số ngày] ngày.
+                      </Typography>
+                      <Grid container spacing={2} alignItems="center">
+                        <Grid item xs={6}>
+                          <Typography variant="body2" color="#5051F9">
+                            1 hour ago
+                          </Typography>
+                        </Grid>
+                        <Grid
+                          item
+                          xs={6}
+                          container
+                          justifyContent="flex-end"
+                          alignItems="flex-end"
+                        >
+                          <Button size="small" disableRipple>
+                            View detail
+                          </Button>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                </CardContent>
+              </Card>
+            </ListItem>
+
+            <ListItem>
+              <Card sx={{ width: "100%", boxShadow: "none" }}>
+                {" "}
+                {/* Đặt boxShadow thành "none" để loại bỏ đổ bóng */}
+                <CardContent>
+                  <Grid container spacing={2} alignItems="center">
+                    <Grid item xs={18}>
+                      <Typography variant="h6" component="div" color="#5051F9">
+                        Toast Title
+                      </Typography>
+                      <Typography variant="body2">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the ...
+                      </Typography>
+                      <Grid container spacing={2} alignItems="center">
+                        <Grid item xs={6}>
+                          <Typography variant="body2" color="#5051F9">
+                            1 hour ago
+                          </Typography>
+                        </Grid>
+                        <Grid
+                          item
+                          xs={6}
+                          container
+                          justifyContent="flex-end"
+                          alignItems="flex-end"
+                        >
+                          <Button size="small" disableRipple>
+                            View detail
+                          </Button>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                </CardContent>
+              </Card>
+            </ListItem>
+
+            {/* Repeat the above ListItem block for other notifications */}
+          </List>
+        </Box>
+      </Popover>
     </AppBar>
   );
 };
