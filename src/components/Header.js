@@ -151,7 +151,7 @@ const Header = ({ onMenuClick, isNavbarVisible }) => {
             onClick={handleClick}
             sx={{
               color: "#000",
-              display: { sm: "none", xs: "none", lg: "block", md: "block" },
+              display: { sm: "block", xs: "block", lg: "block", md: "block" },
             }}
           >
             <NotificationsNoneOutlinedIcon />
