@@ -13,11 +13,23 @@ import {
 import EditIcon from "@mui/icons-material/Edit";
 import CloseIcon from "@mui/icons-material/Close";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import GroupIcon from "@mui/icons-material/Group";
 import PublicIcon from "@mui/icons-material/Public";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 import img1 from "../assets/images/img-1.jpg";
+<<<<<<< Updated upstream
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+=======
+import img2 from "../assets/images/img-2.jpg";
+import img3 from "../assets/images/img-3.jpg";
+import img4 from "../assets/images/img-4.jpg";
+import img5 from "../assets/images/b5.jpg";
+import img6 from "../assets/images/b6.jpg";
+import img7 from "../assets/images/img-5.jpg";
+import img8 from "../assets/images/img-6.jpg";
+import img9 from "../assets/images/img-7.jpg";
+
+>>>>>>> Stashed changes
 export default function NewBoardCard({
   handleClose,
   setShowAllBackgroundCard,
@@ -33,13 +45,18 @@ export default function NewBoardCard({
   const handleGridItemClick = () => {
     setShowAllBackgroundCard(!showAllBackgroundCard);
   };
+
   const handleCreateNewBoardClick = () => {
     setShowLetBuildWorkspace(true);
   };
+
   const options = [
     { label: "Private", icon: <LockOutlinedIcon /> },
     { label: "Public", icon: <PublicIcon /> },
   ];
+
+  const imagesSet1 = [img1, img2, img3, img4];
+  const imagesSet2 = [img5, img6, img7, img8, img9];
 
   return (
     <Card
@@ -126,39 +143,39 @@ export default function NewBoardCard({
         Select background
       </Typography>
       <Grid container spacing={2}>
-        {[...Array(4)].map((_, index) => (
+        {imagesSet1.map((img, index) => (
           <Grid item xs={3} key={index} mb={1}>
             <Box
               component="img"
-              src={img1}
+              src={img}
               sx={{
                 width: "100%",
-                height: "100%",
+                height: "100px",
                 objectFit: "cover",
                 borderRadius: "10px",
               }}
             />
           </Grid>
         ))}
-        {[...Array(5)].map((_, index) => (
+        {imagesSet2.map((img, index) => (
           <Grid item xs={2} key={index} mb={3}>
             <Box
               component="img"
-              src={img1}
+              src={img}
               sx={{
                 width: "100%",
-                height: "100%",
+                height: "100px",
                 objectFit: "cover",
                 borderRadius: "10px",
               }}
             />
           </Grid>
         ))}
-        <Grid item xs={2} mb={3} onClick={() => handleGridItemClick()}>
+        <Grid item xs={2} mb={3} onClick={handleGridItemClick}>
           <Box
             sx={{
               width: "100%",
-              height: "100%",
+              height: "100px",
               objectFit: "cover",
               borderRadius: "10px",
               display: "flex",
