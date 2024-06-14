@@ -39,6 +39,9 @@ import NewGoalCard from "../components/NewGoalCard";
 import GoalDetail from "../components/GoalDetail";
 import Label from "../components/Label";
 import CircleChart from "../components/CircleChart";
+import CircleChart1 from "../components/CircleChart1";
+import CircleChart2 from "../components/CircleChart2";
+
 import "../styles/Uiux.css";
 import Sort from "../components/Sort";
 import { useEffect } from "react";
@@ -426,7 +429,7 @@ const UIUXCourse = () => {
             p: 2,
           }}
         >
-          <CircleChart />
+          <CircleChart1 />
           <Typography variant="h6" color="#5051F9">
             Done Task
           </Typography>
@@ -440,9 +443,9 @@ const UIUXCourse = () => {
             p: 2,
           }}
         >
-          <CircleChart />
+          <CircleChart2 />
           <Typography variant="h6" color="#5051F9">
-            Overdue Task
+            KPI lost
           </Typography>
         </Box>
       </Box>

@@ -5,6 +5,7 @@ import img2 from "../assets/images/dashboard-2.png";
 import img3 from "../assets/images/dashboard-3.png";
 import img4 from "../assets/images/dashboard-4.png";
 import img5 from "../assets/images/dashboard-5.png";
+import img6 from "../assets/images/dashboard-6.png";
 export default function Dashboard() {
   return (
     <Box sx={{ p: 2 }}>
@@ -47,7 +48,7 @@ export default function Dashboard() {
         </Grid>
       </Grid>
       <Typography variant="h6" color="#232360" mb={2}>
-        Task
+        Upcoming Task
       </Typography>
       <Box
         component="img"
@@ -62,7 +63,7 @@ export default function Dashboard() {
       ></Box>
       <Box
         component="img"
-        src={img5}
+        src={img6}
         sx={{
           width: "100%",
           height: "100%",
