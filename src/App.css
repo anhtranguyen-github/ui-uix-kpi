@@ -6,3 +6,58 @@
 * {
   font-family: "Inter", sans-serif;
 }
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.chart-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.chart-item {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chart-item h3 {
+  margin-bottom: 20px;
+}
+
+.chart-item:nth-child(3) {
+  grid-column: span 2;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.chart-container {
+  display: grid;
+  grid-template-areas:
+    'column-horizontal column-vertical'
+    'circle circle';
+  gap: 20px;
+}
+
+.chart-column-horizontal {
+  grid-area: column-horizontal;
+}
+
+.chart-column-vertical {
+  grid-area: column-vertical;
+}
+
+.chart-circle {
+  grid-area: circle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -27,7 +27,7 @@ import {
 import SettingsIcon from "@mui/icons-material/Settings";
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import avatar from "../assets/images/avatar.png";
+import avatar from "../assets/images/avatar.jpg";
 
 const Header = ({ onMenuClick, isNavbarVisible }) => {
   const navigate = useNavigate();

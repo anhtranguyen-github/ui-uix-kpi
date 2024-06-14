@@ -11,7 +11,7 @@ import {
   Select,
 } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import avatar from "../assets/images/avatar.png";
+import avatar from "../assets/images/avatar.jpg";
 import EditIcon from "@mui/icons-material/Edit";
 import { useNavigate, useLocation } from "react-router-dom";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
